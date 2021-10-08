@@ -38,16 +38,16 @@ export default function Continent() {
       </Flex>
 
       <Grid
-        templateColumns="1fr 1fr"
-        flexDirection="row"
+        templateColumns={["", "1fr 1fr"]}
+        templateRows={["1fr 1fr", ""]}
         maxWidth={1120}
         mx="auto"
         justify="space-between"
-        mt="20"
+        mt={["6", "20"]}
         pl={["4", "0"]}
         pr={["4", "0"]}
       >
-        <Text fontSize="2xl" textAlign="justify">
+        <Text fontSize={["sm", "2xl"]} textAlign="justify">
           A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península
           ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de
           águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
@@ -55,27 +55,27 @@ export default function Continent() {
 
         <Flex align="center" justify="space-evenly">
           <Box align="center">
-            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
               50
             </Heading>
-            <Text fontSize="2xl" fontWeight="600" color="gray.450">
+            <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
               países
             </Text>
           </Box>
           <Box align="center">
-            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
               60
             </Heading>
-            <Text fontSize="2xl" fontWeight="600" color="gray.450">
+            <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
               línguas
             </Text>
           </Box>
           <Box align="center">
-            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
               27
             </Heading>
             <Flex align="center">
-              <Text fontSize="2xl" fontWeight="600" color="gray.450">
+              <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
                 cidades +100
               </Text>
               <HStack>
@@ -88,8 +88,8 @@ export default function Continent() {
                   <span>
                     <Icon
                       as={MdInfoOutline}
-                      w={["4", "4"]}
-                      h={["4", "4"]}
+                      w={["3", "4"]}
+                      h={["3", "4"]}
                       color="gray.300"
                       ml="1"
                     />
