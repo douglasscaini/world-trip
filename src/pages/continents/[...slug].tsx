@@ -1,13 +1,17 @@
-import { Flex, Icon, Text } from "@chakra-ui/react";
+import { Flex, Icon, Text, Link, Box, Grid, Heading, Tooltip, HStack } from "@chakra-ui/react";
 import Header from "../../components/Header";
 
 import { IoChevronBackOutline } from "react-icons/io5";
+import { MdInfoOutline } from "react-icons/md";
 
 export default function Continent() {
   return (
     <Flex w="100%" direction="column" overflowX="hidden">
       <Flex w="100%" maxWidth={1120} mx="auto" align="center" pl={["4", "0"]} pr={["4", "0"]}>
-        <Icon as={IoChevronBackOutline} w={["4", "6"]} h={["4", "6"]} />
+        <Link href="/">
+          <Icon as={IoChevronBackOutline} w={["4", "6"]} h={["4", "6"]} />
+        </Link>
+
         <Header />
       </Flex>
 
@@ -30,11 +34,72 @@ export default function Continent() {
           <Text fontSize={["2xl", "5xl"]} fontWeight="600" color="gray.150">
             Europa
           </Text>
-          <Text fontSize={["2xl", "5xl"]} fontWeight="600" color="gray.150">
-            Europa Test Error Push 3
-          </Text>
         </Flex>
       </Flex>
+
+      <Grid
+        templateColumns="1fr 1fr"
+        flexDirection="row"
+        maxWidth={1120}
+        mx="auto"
+        justify="space-between"
+        mt="20"
+        pl={["4", "0"]}
+        pr={["4", "0"]}
+      >
+        <Text fontSize="2xl" textAlign="justify">
+          A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península
+          ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de
+          águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
+        </Text>
+
+        <Flex align="center" justify="space-evenly">
+          <Box align="center">
+            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+              50
+            </Heading>
+            <Text fontSize="2xl" fontWeight="600" color="gray.450">
+              países
+            </Text>
+          </Box>
+          <Box align="center">
+            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+              60
+            </Heading>
+            <Text fontSize="2xl" fontWeight="600" color="gray.450">
+              línguas
+            </Text>
+          </Box>
+          <Box align="center">
+            <Heading fontSize="5xl" fontWeight="600" color="yellow.450">
+              27
+            </Heading>
+            <Flex align="center">
+              <Text fontSize="2xl" fontWeight="600" color="gray.450">
+                cidades +100
+              </Text>
+              <HStack>
+                <Tooltip
+                  label="Tirana, Berlim, Astana e mais..."
+                  placement="bottom"
+                  bg="gray.250"
+                  color="gray.450"
+                >
+                  <span>
+                    <Icon
+                      as={MdInfoOutline}
+                      w={["4", "4"]}
+                      h={["4", "4"]}
+                      color="gray.300"
+                      ml="1"
+                    />
+                  </span>
+                </Tooltip>
+              </HStack>
+            </Flex>
+          </Box>
+        </Flex>
+      </Grid>
     </Flex>
   );
 }
