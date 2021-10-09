@@ -1,4 +1,15 @@
-import { Flex, Icon, Text, Link, Box, Grid, Heading, Tooltip, HStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Icon,
+  Text,
+  Link,
+  Box,
+  Grid,
+  Heading,
+  Tooltip,
+  HStack,
+  Image,
+} from "@chakra-ui/react";
 import Header from "../../components/Header";
 
 import { IoChevronBackOutline } from "react-icons/io5";
@@ -38,8 +49,8 @@ export default function Continent() {
       </Flex>
 
       <Grid
-        templateColumns={["", "1fr 1fr"]}
-        templateRows={["1fr 1fr", ""]}
+        templateColumns={["1fr", "1fr 1fr"]}
+        templateRows={["1fr 1fr", "1fr"]}
         maxWidth={1120}
         mx="auto"
         justify="space-between"
@@ -100,6 +111,164 @@ export default function Continent() {
           </Box>
         </Flex>
       </Grid>
+
+      <Flex w="100%" maxWidth={1120} mx="auto" direction="column" mt={["8", "20"]}>
+        <Text fontSize={["2xl", "4xl"]} fontWeight="500" pl={["4", "0"]}>
+          Cidades +100
+        </Text>
+
+        <Flex w="100%" mt={["5", "10"]} flexWrap="wrap" justify={["center", "space-between"]}>
+          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
+            <Image src="/images/europe/londres.png" alt="Londres" />
+            <Flex
+              border="1px"
+              borderTop="0"
+              borderColor="yellow.450"
+              borderBottomRadius={6}
+              align="center"
+              justify="space-between"
+            >
+              <Flex pt="4" ml="6" direction="column">
+                <Text fontSize="xl" fontWeight="600">
+                  Londres
+                </Text>
+                <Text mt="3" mb="6" fontSize="md" color="gray.350">
+                  Reino Unido
+                </Text>
+              </Flex>
+              <Image
+                src="/images/europe/united_kingdom.png"
+                alt="Bandeira do Reino Unido"
+                w="8"
+                h="8"
+                borderRadius="50%"
+                objectFit="cover"
+                mr="6"
+              />
+            </Flex>
+          </Flex>
+
+          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
+            <Image src="/images/europe/paris.png" alt="Paris" />
+            <Flex
+              border="1px"
+              borderTop="0"
+              borderColor="yellow.450"
+              borderBottomRadius={6}
+              align="center"
+              justify="space-between"
+            >
+              <Flex pt="4" ml="6" direction="column">
+                <Text fontSize="xl" fontWeight="600">
+                  Paris
+                </Text>
+                <Text mt="3" mb="6" fontSize="md" color="gray.350">
+                  França
+                </Text>
+              </Flex>
+              <Image
+                src="/images/europe/france.png"
+                alt="Bandeira da França"
+                w="8"
+                h="8"
+                borderRadius="50%"
+                objectFit="cover"
+                mr="6"
+              />
+            </Flex>
+          </Flex>
+
+          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
+            <Image src="/images/europe/roma.png" alt="Roma" />
+            <Flex
+              border="1px"
+              borderTop="0"
+              borderColor="yellow.450"
+              borderBottomRadius={6}
+              align="center"
+              justify="space-between"
+            >
+              <Flex pt="4" ml="6" direction="column">
+                <Text fontSize="xl" fontWeight="600">
+                  Roma
+                </Text>
+                <Text mt="3" mb="6" fontSize="md" color="gray.350">
+                  Itália
+                </Text>
+              </Flex>
+              <Image
+                src="/images/europe/italy.png"
+                alt="Bandeira da Itália"
+                w="8"
+                h="8"
+                borderRadius="50%"
+                objectFit="cover"
+                mr="6"
+              />
+            </Flex>
+          </Flex>
+
+          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
+            <Image src="/images/europe/praga.png" alt="Praga" />
+            <Flex
+              border="1px"
+              borderTop="0"
+              borderColor="yellow.450"
+              borderBottomRadius={6}
+              align="center"
+              justify="space-between"
+            >
+              <Flex pt="4" ml="6" direction="column">
+                <Text fontSize="xl" fontWeight="600">
+                  Praga
+                </Text>
+                <Text mt="3" mb="6" fontSize="md" color="gray.350">
+                  República Tcheca
+                </Text>
+              </Flex>
+              <Image
+                src="/images/europe/czech_republic.png"
+                alt="Bandeira da República Tcheca"
+                w="8"
+                h="8"
+                borderRadius="50%"
+                objectFit="cover"
+                mr="6"
+              />
+            </Flex>
+          </Flex>
+
+          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
+            <Image src="/images/europe/amsterda.png" alt="Amsterdã" />
+            <Flex
+              border="1px"
+              borderTop="0"
+              borderColor="yellow.450"
+              borderBottomRadius={6}
+              align="center"
+              justify="space-between"
+            >
+              <Flex pt="4" ml="6" direction="column">
+                <Text fontSize="xl" fontWeight="600">
+                  Amsterdã
+                </Text>
+                <Text mt="3" mb="6" fontSize="md" color="gray.350">
+                  Holanda
+                </Text>
+              </Flex>
+              <Image
+                src="/images/europe/netherlands.png"
+                alt="Bandeira da Holanda"
+                w="8"
+                h="8"
+                borderRadius="50%"
+                objectFit="cover"
+                mr="6"
+              />
+            </Flex>
+          </Flex>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

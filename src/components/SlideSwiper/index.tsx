@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Link } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Keyboard, Pagination, Navigation } from "swiper";
 
@@ -27,43 +27,47 @@ export default function SlideSwiper() {
         navigation={true}
       >
         <SwiperSlide>
-          <Flex
-            w="100%"
-            h={["250px", "450px"]}
-            bgImage="url('/images/europe/banner.jpg')"
-            bgSize="cover"
-            bgPosition="center"
-            align="center"
-            justify="center"
-            direction="column"
-          >
-            <Text fontSize={["2xl", "5xl"]} fontWeight="700" color="gray.150">
-              Europa
-            </Text>
-            <Text fontSize={["sm", "2xl"]} fontWeight="700" color="gray.250" mt="4">
-              O continente mais antigo.
-            </Text>
-          </Flex>
+          <Link href="continents/europe">
+            <Flex
+              w="100%"
+              h={["250px", "450px"]}
+              bgImage="url('/images/europe/banner.jpg')"
+              bgSize="cover"
+              bgPosition="center"
+              align="center"
+              justify="center"
+              direction="column"
+            >
+              <Text fontSize={["2xl", "5xl"]} fontWeight="700" color="gray.150">
+                Europa
+              </Text>
+              <Text fontSize={["sm", "2xl"]} fontWeight="700" color="gray.250" mt="4">
+                O continente mais antigo.
+              </Text>
+            </Flex>
+          </Link>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Flex
-            w="100%"
-            h={["250px", "450px"]}
-            bgImage="url('/images/europe/banner.jpg')"
-            bgSize="cover"
-            bgPosition="center"
-            align="center"
-            justify="center"
-            direction="column"
-          >
-            <Text fontSize={["2xl", "5xl"]} fontWeight="700" color="gray.150">
-              Europa
-            </Text>
-            <Text fontSize={["sm", "2xl"]} fontWeight="700" color="gray.250" mt="4">
-              O continente mais antigo.
-            </Text>
-          </Flex>
+          <Link href="continents/europe">
+            <Flex
+              w="100%"
+              h={["250px", "450px"]}
+              bgImage="url('/images/europe/banner.jpg')"
+              bgSize="cover"
+              bgPosition="center"
+              align="center"
+              justify="center"
+              direction="column"
+            >
+              <Text fontSize={["2xl", "5xl"]} fontWeight="700" color="gray.150">
+                Europa
+              </Text>
+              <Text fontSize={["sm", "2xl"]} fontWeight="700" color="gray.250" mt="4">
+                O continente mais antigo.
+              </Text>
+            </Flex>
+          </Link>
         </SwiperSlide>
       </Swiper>
     </Flex>
