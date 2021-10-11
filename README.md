@@ -13,7 +13,7 @@
 
 ## :speech_balloon: Sobre <a name="about"></a>
 
-> Essa aplicação serve para apresentação de uma empresa de viagens para mostrar seus destinos e rotas presentes em seus planos atuais.
+> Essa aplicação é a apresentação de uma empresa de viagens para mostrar seus destinos e rotas presentes em seus planos atuais.
 
 <br />
 <table>
@@ -21,7 +21,7 @@
     <td colspan="1">Web App</td>
   </tr>
   <tr>
-    <td><img src="./.github/desktop.png" width=1000px /></td></td>
+    <td><img src="./.github/worldtrip.gif" width=1000px /></td></td>
   </tr>
 </table>
 
