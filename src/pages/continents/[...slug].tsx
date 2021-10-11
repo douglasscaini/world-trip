@@ -1,7 +1,8 @@
-import { Flex, Icon, Text, Link, Box, Grid, Heading, Tooltip, HStack } from "@chakra-ui/react";
+import { Flex, Icon, Text, Link, Grid } from "@chakra-ui/react";
 import Header from "../../components/Header";
 import Cities from "../../components/Cities";
 import BoxInfo from "../../components/BoxInfo";
+import BannerCountry from "../../components/BannerCountry";
 
 import { IoChevronBackOutline } from "react-icons/io5";
 
@@ -16,27 +17,7 @@ export default function Continent() {
         <Header />
       </Flex>
 
-      <Flex
-        w="100vw"
-        h={["150px", "500px"]}
-        bgImage="url('/images/europe/home.jpg')"
-        bgPosition="100% 100%"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-      >
-        <Flex
-          w="100%"
-          maxWidth={1120}
-          mx="auto"
-          align={["center", "end"]}
-          justify={["center", "start"]}
-          pb={["0", "12"]}
-        >
-          <Text fontSize={["2xl", "5xl"]} fontWeight="600" color="gray.150">
-            Europa
-          </Text>
-        </Flex>
-      </Flex>
+      <BannerCountry />
 
       <Grid
         templateColumns={["1fr", "1fr 1fr"]}
