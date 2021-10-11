@@ -1,19 +1,9 @@
-import {
-  Flex,
-  Icon,
-  Text,
-  Link,
-  Box,
-  Grid,
-  Heading,
-  Tooltip,
-  HStack,
-  Image,
-} from "@chakra-ui/react";
+import { Flex, Icon, Text, Link, Box, Grid, Heading, Tooltip, HStack } from "@chakra-ui/react";
 import Header from "../../components/Header";
+import Cities from "../../components/Cities";
+import BoxInfo from "../../components/BoxInfo";
 
 import { IoChevronBackOutline } from "react-icons/io5";
-import { MdInfoOutline } from "react-icons/md";
 
 export default function Continent() {
   return (
@@ -65,50 +55,9 @@ export default function Continent() {
         </Text>
 
         <Flex align="center" justify="space-evenly">
-          <Box align="center">
-            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
-              50
-            </Heading>
-            <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
-              países
-            </Text>
-          </Box>
-          <Box align="center">
-            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
-              60
-            </Heading>
-            <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
-              línguas
-            </Text>
-          </Box>
-          <Box align="center">
-            <Heading fontSize={["2xl", "5xl"]} fontWeight="600" color="yellow.450">
-              27
-            </Heading>
-            <Flex align="center">
-              <Text fontSize={["lg", "2xl"]} fontWeight={["400", "600"]} color="gray.450">
-                cidades +100
-              </Text>
-              <HStack>
-                <Tooltip
-                  label="Tirana, Berlim, Astana e mais..."
-                  placement="bottom"
-                  bg="gray.250"
-                  color="gray.450"
-                >
-                  <span>
-                    <Icon
-                      as={MdInfoOutline}
-                      w={["3", "4"]}
-                      h={["3", "4"]}
-                      color="gray.300"
-                      ml="1"
-                    />
-                  </span>
-                </Tooltip>
-              </HStack>
-            </Flex>
-          </Box>
+          <BoxInfo number={50} text="países" />
+          <BoxInfo number={60} text="línguas" />
+          <BoxInfo number={27} text="cidades +100" cityInfo={true} />
         </Flex>
       </Grid>
 
@@ -117,157 +66,7 @@ export default function Continent() {
           Cidades +100
         </Text>
 
-        <Flex w="100%" mt={["5", "10"]} flexWrap="wrap" justify={["center", "space-between"]}>
-          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
-            <Image src="/images/europe/londres.png" alt="Londres" />
-            <Flex
-              border="1px"
-              borderTop="0"
-              borderColor="yellow.450"
-              borderBottomRadius={6}
-              align="center"
-              justify="space-between"
-            >
-              <Flex pt="4" ml="6" direction="column">
-                <Text fontSize="xl" fontWeight="600">
-                  Londres
-                </Text>
-                <Text mt="3" mb="6" fontSize="md" color="gray.350">
-                  Reino Unido
-                </Text>
-              </Flex>
-              <Image
-                src="/images/europe/united_kingdom.png"
-                alt="Bandeira do Reino Unido"
-                w="8"
-                h="8"
-                borderRadius="50%"
-                objectFit="cover"
-                mr="6"
-              />
-            </Flex>
-          </Flex>
-
-          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
-            <Image src="/images/europe/paris.png" alt="Paris" />
-            <Flex
-              border="1px"
-              borderTop="0"
-              borderColor="yellow.450"
-              borderBottomRadius={6}
-              align="center"
-              justify="space-between"
-            >
-              <Flex pt="4" ml="6" direction="column">
-                <Text fontSize="xl" fontWeight="600">
-                  Paris
-                </Text>
-                <Text mt="3" mb="6" fontSize="md" color="gray.350">
-                  França
-                </Text>
-              </Flex>
-              <Image
-                src="/images/europe/france.png"
-                alt="Bandeira da França"
-                w="8"
-                h="8"
-                borderRadius="50%"
-                objectFit="cover"
-                mr="6"
-              />
-            </Flex>
-          </Flex>
-
-          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
-            <Image src="/images/europe/roma.png" alt="Roma" />
-            <Flex
-              border="1px"
-              borderTop="0"
-              borderColor="yellow.450"
-              borderBottomRadius={6}
-              align="center"
-              justify="space-between"
-            >
-              <Flex pt="4" ml="6" direction="column">
-                <Text fontSize="xl" fontWeight="600">
-                  Roma
-                </Text>
-                <Text mt="3" mb="6" fontSize="md" color="gray.350">
-                  Itália
-                </Text>
-              </Flex>
-              <Image
-                src="/images/europe/italy.png"
-                alt="Bandeira da Itália"
-                w="8"
-                h="8"
-                borderRadius="50%"
-                objectFit="cover"
-                mr="6"
-              />
-            </Flex>
-          </Flex>
-
-          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
-            <Image src="/images/europe/praga.png" alt="Praga" />
-            <Flex
-              border="1px"
-              borderTop="0"
-              borderColor="yellow.450"
-              borderBottomRadius={6}
-              align="center"
-              justify="space-between"
-            >
-              <Flex pt="4" ml="6" direction="column">
-                <Text fontSize="xl" fontWeight="600">
-                  Praga
-                </Text>
-                <Text mt="3" mb="6" fontSize="md" color="gray.350">
-                  República Tcheca
-                </Text>
-              </Flex>
-              <Image
-                src="/images/europe/czech_republic.png"
-                alt="Bandeira da República Tcheca"
-                w="8"
-                h="8"
-                borderRadius="50%"
-                objectFit="cover"
-                mr="6"
-              />
-            </Flex>
-          </Flex>
-
-          <Flex w={256} direction="column" borderRadius={6} mb="12" bg="white" boxShadow="lg">
-            <Image src="/images/europe/amsterda.png" alt="Amsterdã" />
-            <Flex
-              border="1px"
-              borderTop="0"
-              borderColor="yellow.450"
-              borderBottomRadius={6}
-              align="center"
-              justify="space-between"
-            >
-              <Flex pt="4" ml="6" direction="column">
-                <Text fontSize="xl" fontWeight="600">
-                  Amsterdã
-                </Text>
-                <Text mt="3" mb="6" fontSize="md" color="gray.350">
-                  Holanda
-                </Text>
-              </Flex>
-              <Image
-                src="/images/europe/netherlands.png"
-                alt="Bandeira da Holanda"
-                w="8"
-                h="8"
-                borderRadius="50%"
-                objectFit="cover"
-                mr="6"
-              />
-            </Flex>
-          </Flex>
-        </Flex>
+        <Cities />
       </Flex>
     </Flex>
   );
