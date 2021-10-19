@@ -31,19 +31,23 @@
 # Instalar as dependências necessárias:
 $ yarn
 
+# Configurar o Prismic:
+$ .env.example to .env.local
+
 # Iniciar o projeto:
 $ yarn dev
 ```
 
 ## :triangular_flag_on_post: Desafio <a name="challenge"></a>
 
-> O principal desafio foi implementar totalmente do zero a aplicação com Chakra.
+> O principal desafio foi implementar a aplicação totalmente do zero com Chakra e integrar o Prismic CMS.
 
 ## :heavy_check_mark: Tecnologias <a name="technologies"></a>
 
 - [Next](https://nextjs.org/)
 - [React](https://pt-br.reactjs.org/)
 - [Chakra](https://chakra-ui.com/)
+- [Prismic](https://prismic.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ---
