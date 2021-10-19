@@ -1,13 +1,12 @@
-import { Flex, Icon, Text, Link, Grid } from "@chakra-ui/react";
-import Header from "../../components/Header";
+import { Flex, Text, Grid } from "@chakra-ui/react";
 import Cities from "../../components/Cities";
 import BoxInfo from "../../components/BoxInfo";
 import BannerCountry from "../../components/BannerCountry";
 import { GetStaticPaths, GetStaticProps } from "next";
 
-import { IoChevronBackOutline } from "react-icons/io5";
 import { getPrismicClient } from "../../services/prismic";
 import { ParsedUrlQuery } from "querystring";
+import HeaderContinent from "../../components/HeaderContinent";
 
 interface ParamsProps extends ParsedUrlQuery {
   slug: string;
@@ -48,13 +47,7 @@ export type ContinentProps = {
 export default function Continent({ continent }: ContinentProps) {
   return (
     <Flex w="100%" direction="column" overflowX="hidden">
-      <Flex w="100%" maxWidth={1120} mx="auto" align="center" pl={["4", "0"]} pr={["4", "0"]}>
-        <Link href="/">
-          <Icon as={IoChevronBackOutline} w={["4", "6"]} h={["4", "6"]} />
-        </Link>
-
-        <Header />
-      </Flex>
+      <HeaderContinent />
 
       <BannerCountry banner={continent.banner} title={continent.title} />
 
