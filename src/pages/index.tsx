@@ -10,9 +10,12 @@ import Prismic from "@prismicio/client";
 
 type Continent = {
   slug: string;
+  title: string;
+  subtitle: string;
+  banner: string;
 };
 
-type ContinentsProps = {
+export type ContinentsProps = {
   continents: Continent[];
 };
 
@@ -33,7 +36,7 @@ export default function Home({ continents }: ContinentsProps) {
         </Text>
       </Center>
 
-      <SlideSwiper />
+      <SlideSwiper continents={continents} />
     </Flex>
   );
 }
@@ -43,9 +46,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const response = await prismic.query(Prismic.predicates.at("document.type", "continent"));
 
-  const continents = response.results.map((continent) => continent.data);
-
-  console.log(continents);
+  const continents = response.results.map((continent) => {
+    return {
+      slug: continent.uid,
+      title: continent.data.title,
+      subtitle: continent.data.subtitle,
+      banner: continent.data.banner.url,
+    };
+  });
 
   return {
     props: { continents },
