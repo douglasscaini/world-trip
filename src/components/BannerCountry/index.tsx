@@ -1,12 +1,17 @@
 import { Flex, Text } from "@chakra-ui/react";
 
-export default function BannerCountry() {
+type BannerCountryProps = {
+  banner: string;
+  title: string;
+};
+
+export default function BannerCountry({ banner, title }: BannerCountryProps) {
   return (
     <Flex
       w="100vw"
       h={["150px", "500px"]}
-      bgImage="url('/images/europe/home.jpg')"
-      bgPosition="100% 100%"
+      bgImage={`url(${banner})`}
+      bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
     >
@@ -19,7 +24,7 @@ export default function BannerCountry() {
         pb={["0", "12"]}
       >
         <Text fontSize={["2xl", "5xl"]} fontWeight="600" color="gray.150">
-          Europa
+          {title}
         </Text>
       </Flex>
     </Flex>
